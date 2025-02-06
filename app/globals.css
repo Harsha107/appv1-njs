@@ -2,20 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.tab-active{
+    @apply bg-black text-gray-50 select-none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.db-tab4-btn {
+    @apply px-2 py-1 border border-gray-100;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.db-tab4-btn:hover {
+    @apply bg-black text-white border-white;
 }
