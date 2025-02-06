@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import pfp from '../../public/pfp-img.jpg';
+import Link from "next/link";
 
 export default function UserProfile() {
     return (
@@ -16,6 +17,7 @@ export default function UserProfile() {
                         </div>
                     </div>
                     <div className="flex flex-row gap-6">
+                        <Link href='/user-profile/settings' className="bg-white text-blue-500 rounded-lg border border-blue-500 p-2 hover:bg-blue-500 hover:text-white">Settings</Link>
                         <button className="bg-black text-white rounded-lg p-2 hover:bg-white hover:text-black hover:border hover:border-black">Edit Profile</button>
                         <button className="bg-white text-red-500 rounded-lg border border-red-500 p-2 hover:bg-red-500 hover:text-white">Deactivate Account</button>
                     </div>

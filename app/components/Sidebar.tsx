@@ -27,10 +27,12 @@ export default function Sidebar() {
             </ul>
 
             <div className="absolute bottom-4 left-4 flex items-center space-x-2">
-                <Image src={pfp} alt="profile-pic" className="w-10 h-10 rounded-full"/>
+                <Link href='/user-profile'>
+                    <Image src={pfp} alt="profile-pic" className="w-10 h-10 rounded-full"/>
+                </Link>
                 <div>
-                    <h3 className="text-sm font-semibold">John Doe</h3>
-                    <p className="text-xs font-gray-500">johndoe@gmail.com</p>
+                    <Link href='/user-profile'><h3 className="text-sm font-semibold">John Doe</h3></Link>
+                    <Link href='/user-profile'><p className="text-xs font-gray-500">johndoe@gmail.com</p></Link>
                 </div>
             </div>
         </aside>

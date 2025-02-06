@@ -1,4 +1,5 @@
 import React from "react";
+import { FaKey, FaUser, FaTrash } from "react-icons/fa";
 
 export default function UserProfileSettings() {
     return (
@@ -9,7 +10,15 @@ export default function UserProfileSettings() {
                         <p className="text-gray-600 text-sm">Manage your account preferences and system settings</p>
                     </div>
 
-                    
+                    <div>
+                        <div>
+
+                        </div>
+
+                        <div>
+
+                        </div>
+                    </div>
             </main>
         </div>
     )
