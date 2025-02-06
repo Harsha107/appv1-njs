@@ -4,7 +4,6 @@ import React from "react";
 import pfp from '../../public/pfp-img.jpg';
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { CgToolbarTop } from "react-icons/cg";
 import { FaSearch } from "react-icons/fa";
 import Image from "next/image";
 

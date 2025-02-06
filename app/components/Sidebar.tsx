@@ -18,7 +18,7 @@ export default function Sidebar() {
                 </li>
                 <li className="flex items-center p-2 cursor-pointer hover:bg-gray-200">
                     <FaUsers className="text-lg mr-2"/>
-                    <Link href="/">Users</Link>
+                    <Link href="/user-list">Users</Link>
                 </li>
                 <li className="flex items-center p-2 cursor-pointer hover:bg-gray-200">
                     <FaClipboardList className="text-lg mr-2"/>

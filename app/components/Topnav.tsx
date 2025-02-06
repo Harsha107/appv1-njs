@@ -1,12 +1,13 @@
 import React from "react";
 import { FaSearch, FaBell } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Topnav() {
     return (
         <nav className="fixed top-0 left-64 right-0 h-16 bg-white flex justify-between items-center px-6 shadow-xs z-50">
-            <a href="/">
+            <Link href="/">
                 <h2 className="text-lg font-medium">Overview</h2>
-            </a>
+            </Link>
 
             <div className="flex items-center space-x-4">
                 <div className="flex items-center px-4 py-2 rounded-md bg-gray-100">

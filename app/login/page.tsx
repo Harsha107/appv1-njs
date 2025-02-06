@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
               <input type="checkbox" />
               Remember me!
             </label>
-            <a href="/" className="text-blue-600 no-underline hover:underline">Forgot Passowrd?</a>
+            <Link href="/" className="text-blue-600 no-underline hover:underline">Forgot Passowrd?</Link>
           </div>
 
           <button className="w-full bg-black text-white p-2 mt-4 cursor-pointer rounded transition-opacity duration-200 ease-in-out hover:opacity-80">
@@ -41,8 +42,8 @@ export default function Home() {
           </button>
 
           <p className="text-center text-sm mt-4">
-            Don't have an account?
-            <a href="/" className="ml-1 text-blue-600 no-underline hover:underline">Sign up!</a>
+            Dont have an account?
+            <Link href="/" className="ml-1 text-blue-600 no-underline hover:underline">Sign up!</Link>
           </p>
         </div>
       </main>
