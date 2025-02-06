@@ -19,7 +19,7 @@ export default function SidebarWithoutPic() {
                 </li>
                 <li className="flex items-center p-2 hover:bg-gray-300 cursor-pointer">
                     <FaClipboardList className="mr-2 text-lg"/>
-                    <a href="/">Posts</a>
+                    <a href="/posts">Posts</a>
                 </li>
             </ul>
         </aside>
