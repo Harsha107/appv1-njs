@@ -1,29 +1,9 @@
-"use client";
-
-import React, { useState } from 'react';
+import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import Image from 'next/image';
 import pfp from '../../public/pfp-img.jpg';
 
 export default function UserListComp() {
-    
-    const [filter, setFilter] = useState("Today");
-    
-    const usersData = {
-        Today: [
-            { name: "John Doe", username: "@johndoe", email: "johndoe@example.com", status: "Active", joined: "Jan 15, 2024" },
-            { name: "Jane Smith", username: "@janesmith", email: "janesmith@example.com", status: "Pending", joined: "Jan 14, 2024" }
-        ],
-        Yesterday: [
-            { name: "Mike Johnson", username: "@mikejohnson", email: "mikejohnson@example.com", status: "Active", joined: "Jan 13, 2024" }
-        ],
-        "Last 2 Weeks": [
-            { name: "John Doe", username: "@johndoe", email: "johndoe@example.com", status: "Active", joined: "Jan 15, 2024" },
-            { name: "Jane Smith", username: "@janesmith", email: "janesmith@example.com", status: "Pending", joined: "Jan 14, 2024" },
-            { name: "Mike Johnson", username: "@mikejohnson", email: "mikejohnson@example.com", status: "Active", joined: "Jan 13, 2024" }
-        ]
-    }
-    
     return (
         <div>
             <div className="bg-white w-full mt-5 flex justify-between items-center shadow-md rounded-lg p-4">
@@ -55,29 +35,44 @@ export default function UserListComp() {
                         </tr>
                     </thead>
                     <tbody>
-                        {usersData[filter as keyof typeof usersData]?.map((user: {name: string, username: string, email: string, status: string, joined: string}, index: number) => (
-                            <tr key={index}>
-                                <td className="p-3 border-b border-solid border-gray-200 text-left flex flex-row gap-2">
-                                    <Image src={pfp} alt="user" className="w-12 h-12 rounded-full"/>
-                                    <div className="flex flex-col">
-                                        <span className="text-gray-900">{user.name}</span>
-                                        <span className="text-gray-600 text-sm">{user.username}</span>
-                                    </div>
-                                </td>
-                                <td className="p-3 border-b border-solid border-gray-200 text-left">{user.email}</td>
-                                <td className="p-3 border-b border-solid border-gray-200 text-left">
-                                    <span className={`px-2 py-1 rounded font-xs ${user.status === "Active" ? "bg-green-100 text-green-700" : "bg-yellow-100 text-yellow-700"}`}>
-                                        {user.status}
-                                    </span>
-                                </td>
-                                <td className="p-3 border-b border-solid border-gray-200 text-left">{user.joined}</td>
-                                <td className="p-3 border-b border-solid border-gray-200 text-left">
-                                    <button className="cursor-pointer mr-2 text-blue-600">View</button>
-                                    <button className="cursor-pointer mr-2 text-gray-600">Edit</button>
-                                    <button className="cursor-pointer mr-2 text-red-600">Delete</button>
-                                </td>
-                            </tr>
-                        ))}
+                        <tr>
+                            <td className="p-3 border-b border-solid border-gray-200 text-left flex flex-row gap-2">
+                                <Image src={pfp} alt="user" className="w-12 h-12 rounded-full"/>
+                                <div className="flex flex-col">
+                                    <span className="text-gray-900">John Doe</span>
+                                    <span className="text-gray-600 text-sm">@johndoe</span>
+                                </div>
+                            </td>
+                            <td className="p-3 border-b border-solid border-gray-200 text-left">johndoe@example.com</td>
+                            <td className="p-3 border-b border-solid border-gray-200 text-left">
+                                <span className="px-2 py-1 rounded font-xs bg-green-100 text-green-700">Active</span>
+                            </td>
+                            <td className="p-3 border-b border-solid border-gray-200 text-left">Jan 15, 2024</td>
+                            <td className="p-3 border-b border-solid border-gray-200 text-left">
+                                <button className="cursor-pointer mr-2 text-blue-600">View</button>
+                                <button className="cursor-pointer mr-2 text-gray-600">Edit</button>
+                                <button className="cursor-pointer mr-2 text-red-600">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="p-3 border-b border-solid border-gray-200 text-left flex flex-row gap-2">
+                                <Image src={pfp} alt="user" className="w-12 h-12 rounded-full"/>
+                                <div className="flex flex-col">
+                                    <span className="text-gray-900">Jane Smith</span>
+                                    <span className="text-gray-600 text-sm">@janesmith</span>
+                                </div>
+                            </td>
+                            <td className="p-3 border-b border-solid border-gray-200 text-left">janesmith@example.com</td>
+                            <td className="p-3 border-b border-solid border-gray-200 text-left">
+                                <span className="px-2 py-1 rounded font-xs bg-yellow-100 text-yellow-700">Pending</span>
+                            </td>
+                            <td className="p-3 border-b border-solid border-gray-200 text-left">Jan 14, 2024</td>
+                            <td className="p-3 border-b border-solid border-gray-200 text-left">
+                                <button className="cursor-pointer mr-2 text-blue-600">View</button>
+                                <button className="cursor-pointer mr-2 text-gray-600">Edit</button>
+                                <button className="cursor-pointer mr-2 text-red-600">Delete</button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
 
@@ -93,5 +88,5 @@ export default function UserListComp() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

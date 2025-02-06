@@ -1,5 +1,5 @@
 import React from "react";
-import { FaKey, FaUser, FaTrash } from "react-icons/fa";
+// import { FaKey, FaUser, FaTrash } from "react-icons/fa";
 
 export default function UserProfileSettings() {
     return (
