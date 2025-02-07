@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Topnav() {
     return (
-        <nav className="fixed top-0 left-64 right-0 h-16 bg-white flex justify-between items-center px-6 shadow-xs z-50">
-            <Link href="/">
+        <nav className="fixed top-0 left-0 xl:left-64 right-0 h-16 bg-white flex justify-end xl:justify-between items-center px-6 shadow-xs z-1">
+            <Link href="/" className="hidden xl:block">
                 <h2 className="text-lg font-medium">Overview</h2>
             </Link>
 

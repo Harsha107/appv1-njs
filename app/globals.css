@@ -7,7 +7,7 @@
 }
 
 .db-tab4-btn {
-    @apply px-2 py-1 border border-gray-100;
+    @apply text-xs px-2 py-1 border border-gray-100;
 }
 
 .db-tab4-btn:hover {

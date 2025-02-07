@@ -126,7 +126,7 @@ export default function PostsPage() {
   };
 
     return (
-        <div className="bg-gray-100 mt-16 ml-64">
+        <div className="bg-gray-100 mt-16 ml-0 md:ml-64">
             <main className="flex flex-col flex-1 gap-4 pt-4 mx-4">
                 <div className="bg-white flex justify-between items-center shadow-md rounded-lg p-6">
                     <div>
@@ -157,7 +157,7 @@ export default function PostsPage() {
                                         <p className="font-extralight text-sm">{post.time}</p>
                                     </span>
                                 </div>
-                                <p className={` p-2 w-22 h-10 rounded-2xl ${post.status === "Draft" ? "text-yellow-600 bg-yellow-100" : "text-green-600 bg-green-100"}`}>{post.status}</p>
+                                <p className={` p-2 h-8 text-xs rounded-2xl ${post.status === "Draft" ? "text-yellow-600 bg-yellow-100" : "text-green-600 bg-green-100"}`}>{post.status}</p>
                             </div>
 
                             <div className="flex flex-col gap-2">

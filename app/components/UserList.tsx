@@ -1,84 +1,85 @@
-import React from 'react';
-import { FaSearch } from 'react-icons/fa';
-import Image from 'next/image';
+import React from "react";
 import pfp from '../../public/pfp-img.jpg';
+import { FaSearch } from "react-icons/fa";
+import Image from "next/image";
 
-export default function UserListComp() {
+export default function UserList() {
+
+    const UserListData = [
+        {
+            user: "John Doe",
+            userId: "@johndoe",
+            email: "johndoe@example.com",
+            status: "Active",
+            joined: "Jan 15, 2024", 
+        },
+        {
+            user: "Jane Smith",
+            userId: "@janesmith",
+            email: "janesmith@example.com",
+            status: "Pending",
+            joined: "Jan 14, 2024",
+        }
+    ]
+
     return (
         <div>
-            <div className="bg-white w-full mt-5 flex justify-between items-center shadow-md rounded-lg p-4">
+            <div className="bg-white shadow-md rounded-lg m-4 flex flex-row justify-between items-center p-4">
                 <div>
-                    <h1 className="font-bold text-lg">User List</h1>
-                    <p className="text-gray-600 text-sm">Manage and view all registered users</p>
+                    <h1 className="font-bold text-sm 2xl:text-lg">User List</h1>
+                    <p className="font-extralight text-xs 2xl:text-sm">Manage and view all registered users</p>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                    <div className="flex items-center px-4 py-2 rounded-md bg-gray-100">
-                        <input type="text" placeholder="Search user..." className="bg-transparent border-none outline-none text-sm w-36"/>
-                        <FaSearch className="text-gray-500 ml-2"/>
+                <div className="flex flex-row gap-8 2xl:gap-4 items-center">
+                    <div className="flex flex-row gap-2 2xl:px-4 2xl:py-2">
+                        <input type="text" placeholder="Search user..." className="bg-transparent border-none outline-none text-xs 2xl:text-sm w-20 2xl:w-36" />
+                        <FaSearch className="text-xs text-gray-500 2xl:text-base 2xl:ml-2"/>
                     </div>
-                    <button className="bg-black text-white px-3 py-1 rounded-lg text-xm cursor-pointer transition-opacity duration-200 ease-in-out hover:opacity-80">
+                    <button className="bg-black text-white text-xs 2xl:text-sm p-2 rounded-lg hover:bg-white hover:text-black hover:border hover:border-black ">
                         Add User
                     </button>
                 </div>
             </div>
 
-            <div className="bg-white w-full mt-5 shadow-md rounded-lg p-1">
-                <table className="w-full border-collapse">
+            <div className="mx-4 bg-white shadow-md rounded-lg">
+                <table className="w-full corder-collapse">
                     <thead className="bg-gray-100">
                         <tr>
-                            <th className="p-3 border-b border-solid border-gray-200 text-left">User</th>
-                            <th className="p-3 border-b border-solid border-gray-200 text-left">Email</th>
-                            <th className="p-3 border-b border-solid border-gray-200 text-left">Status</th>
-                            <th className="p-3 border-b border-solid border-gray-200 text-left">Joined Date</th>
-                            <th className="p-3 border-b border-solid border-gray-200 text-left">Actions</th>
+                            <th className="px-4 py-2 2xl:p-4 border-b border-solid border-gray-200 text-left text-xs font-extralight">USER</th>
+                            <th className="px-4 py-2 2xl:p-4 border-b border-solid border-gray-200 text-left text-xs font-extralight">EMAIL</th>
+                            <th className="px-4 py-2 2xl:p-4 border-b border-solid border-gray-200 text-left text-xs font-extralight">STATUS</th>
+                            <th className="px-4 py-2 2xl:p-4 border-b border-solid border-gray-200 text-left text-xs font-extralight">JOINED DATE</th>
+                            <th className="px-4 py-2 2xl:p-4 border-b border-solid border-gray-200 text-left text-xs font-extralight">ACTIONS</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td className="p-3 border-b border-solid border-gray-200 text-left flex flex-row gap-2">
-                                <Image src={pfp} alt="user" className="w-12 h-12 rounded-full"/>
-                                <div className="flex flex-col">
-                                    <span className="text-gray-900">John Doe</span>
-                                    <span className="text-gray-600 text-sm">@johndoe</span>
-                                </div>
-                            </td>
-                            <td className="p-3 border-b border-solid border-gray-200 text-left">johndoe@example.com</td>
-                            <td className="p-3 border-b border-solid border-gray-200 text-left">
-                                <span className="px-2 py-1 rounded font-xs bg-green-100 text-green-700">Active</span>
-                            </td>
-                            <td className="p-3 border-b border-solid border-gray-200 text-left">Jan 15, 2024</td>
-                            <td className="p-3 border-b border-solid border-gray-200 text-left">
-                                <button className="cursor-pointer mr-2 text-blue-600">View</button>
-                                <button className="cursor-pointer mr-2 text-gray-600">Edit</button>
-                                <button className="cursor-pointer mr-2 text-red-600">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="p-3 border-b border-solid border-gray-200 text-left flex flex-row gap-2">
-                                <Image src={pfp} alt="user" className="w-12 h-12 rounded-full"/>
-                                <div className="flex flex-col">
-                                    <span className="text-gray-900">Jane Smith</span>
-                                    <span className="text-gray-600 text-sm">@janesmith</span>
-                                </div>
-                            </td>
-                            <td className="p-3 border-b border-solid border-gray-200 text-left">janesmith@example.com</td>
-                            <td className="p-3 border-b border-solid border-gray-200 text-left">
-                                <span className="px-2 py-1 rounded font-xs bg-yellow-100 text-yellow-700">Pending</span>
-                            </td>
-                            <td className="p-3 border-b border-solid border-gray-200 text-left">Jan 14, 2024</td>
-                            <td className="p-3 border-b border-solid border-gray-200 text-left">
-                                <button className="cursor-pointer mr-2 text-blue-600">View</button>
-                                <button className="cursor-pointer mr-2 text-gray-600">Edit</button>
-                                <button className="cursor-pointer mr-2 text-red-600">Delete</button>
-                            </td>
-                        </tr>
+                        {UserListData.map((userList: {user: string, userId: string, email: string, status: string, joined: string}, index: number) => (
+                            <tr key={index}>
+                                <td className="flex flex-row p-4 items-center gap-2 border-gray-200 text-left">
+                                    <Image src={pfp} alt='pfp' className="size-10 2xl:size-12 rounded-full"/>
+                                    <div className="flex flex-col gap-1">
+                                        <span className="text-sm 2xl:text-base">{userList.user}</span>
+                                        <span className="text-xs 2xl:text-sm font-extralight">{userList.userId}</span>
+                                    </div>
+                                </td>
+                                <td className="text-xs 2xl:text-base font-extralight p-4 border-gray-200 text-left">{userList.email}</td>
+                                <td className="p-4 border-gray-200 text-left">
+                                    <span className={`text-xs font-extralight ${userList.status === 'Active' ? 'text-green-500 bg-green-100 p-1 rounded-lg' : 'text-yellow-500 bg-yellow-100 p-1 rounded-lg' }`}>{userList.status}</span>
+                                </td>
+                                <td className="text-xs 2xl:text-base font-extralight p-4 border-gray-200 text-left">{userList.joined}</td>
+                                <td className="p-4 border-gray-200 text-left space-x-2 items-center">
+                                    <button className="text-xs 2xl:text-base cursor-pointer font-extralight">View</button>
+                                    <button className="text-xs 2xl:text-base cursor-pointer font-extralight">Edit</button>
+                                    <button className="text-xs 2xl:text-base cursor-pointer font-extralight text-red-500">Delete</button>
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
 
-                <div className="flex flex-row justify-between p-2">
-                    <span className="mt-2">Showing 1 to 10 results of 97 results</span>
-                    <div>
+                <div className="flex flex-row justify-between p-4 items-center">
+                    <span className="text-xs">Showing 1 to 10 results of 97 results</span>
+                    <div className="flex flex-row">
                         <button className="db-tab4-btn">&lt;</button>
                         <button className="db-tab4-btn">1</button>
                         <button className="db-tab4-btn">2</button>
@@ -88,5 +89,5 @@ export default function UserListComp() {
                 </div>
             </div>
         </div>
-    );
+    )
 }

@@ -64,7 +64,7 @@ export default function DashboardOverview() {
     }
 
     return (
-        <div className="bg-gray-100 mt-16 ml-64">
+        <div className="bg-gray-100 mt-16 ml-0 md:ml-64">
             <main className="bg-transparent flex flex-col justify-between m-4">
                 <div className="bg-white flex items-center h-16 p-3 w-full mt-5 shadow-md rounded-lg">
                     <div className="flex gap-6">
