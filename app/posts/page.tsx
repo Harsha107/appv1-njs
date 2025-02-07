@@ -126,27 +126,27 @@ export default function PostsPage() {
   };
 
     return (
-        <div className="bg-gray-100 mt-16 ml-0 md:ml-64">
+        <div className="bg-transparent mt-16 ml-0 2xl:ml-64">
             <main className="flex flex-col flex-1 gap-4 pt-4 mx-4">
-                <div className="bg-white flex justify-between items-center shadow-md rounded-lg p-6">
+                <div className="bg-white shadow-md rounded-lg flex flex-row justify-between items-center p-4">
                     <div>
-                        <h1 className="font-bold text-lg">Posts List</h1>
-                        <p className="text-gray-600 text-sm">View and manage all posts</p>
+                        <h1 className="font-bold text-sm 2xl:text-lg">Posts List</h1>
+                        <p className="font-extralight text-xs 2xl:text-sm">View and manage all posts</p>
                     </div>
                     
-                    <div className="flex items-center space-x-4">
-                        <div className="flex items-center px-4 py-2 rounded-md bg-gray-100">
-                            <input type="text" placeholder="Search posts..." className="bg-transparent border-none outline-none text-sm w-36"/>
-                            <FaSearch className="text-gray-500 ml-2"/>
+                    <div className="flex flex-row gap-8 2xl:gap-4 items-center">
+                        <div className="flex flex-row gap-2 2xl:px-4 xl:py-2">
+                            <input type="text" placeholder="Search posts..." className="bg-transparent border-none outline-none text-xs 2xl:text-sm w-20 2xl:w-36"/>
+                            <FaSearch className="text-xs 2xl:text-base text-gray-500 2xl:ml-2"/>
                         </div>
-                        <select className="text-black px-3 py-1 rounded-lg text-sm cursor-pointer transition-opacity duration-200 ease-in-out hover:opacity-80">
+                        <select className="text-black px-3 py-1 rounded-lg text-xs 2xl:text-xm cursor-pointer transition-opacity duration-200 ease-in-out hover:opacity-80">
                             <option value="add">All Posts</option>
                             <option value="remove">...</option>
                         </select>
                     </div>
                 </div>
 
-                <div className="bg-transparent flex justify-between gap-4">
+                <div className="bg-transparent flex flex-col md:flex-row justify-between gap-4">
                     {posts.map((post: {author: string, time: string, title: string, description: string, views: string, status: string}, index: number) => (
                         <div key={index} className="bg-white pt-4 px-4 pb-6 shadow-md flex flex-col gap-3 flex-1 rounded-lg">
                             <div className="flex flex-row justify-between">
@@ -176,34 +176,32 @@ export default function PostsPage() {
                     ))}
                 </div>
 
-                <div className="bg-white p-4 shadow-md rounded-lg">
-                    <div className="flex flex-row justify-between">
-                        <span className="text-sm mt-1">Showing 1 to 10 results of 97 results</span>
-                        <div>
-                            <button className="db-tab4-btn">&lt;</button>
-                            <button className="db-tab4-btn">1</button>
-                            <button className="db-tab4-btn">2</button>
-                            <button className="db-tab4-btn">3</button>
-                            <button className="db-tab4-btn">&gt;</button>
-                        </div>
+                <div className="bg-white shadow-md rounded-lg flex flex-row justify-between p-4 items-center">
+                    <span className="text-xs">Showing 1 to 10 results of 97 results</span>
+                    <div className="flex flex-row">
+                        <button className="db-tab4-btn">&lt;</button>
+                        <button className="db-tab4-btn">1</button>
+                        <button className="db-tab4-btn">2</button>
+                        <button className="db-tab4-btn">3</button>
+                        <button className="db-tab4-btn">&gt;</button>
                     </div>
                 </div>
 
-                <div className="bg-white flex justify-between items-center shadow-md rounded-lg p-6 mt-4">
+                <div className="bg-white shadow-md rounded-lg mt-4 flex flex-row justify-between items-center p-4">
                     <div>
-                        <h1 className="font-bold text-lg">Analytics Overview</h1>
-                        <p className="text-gray-600 text-sm">Track user and post metrics</p>
+                        <h1 className="font-bold text-sm 2xl:text-lg">Analytics Overview</h1>
+                        <p className="font-extralight text-xs 2xl:text-sm">Track user and post metrics</p>
                     </div>
                     
                     <div className="flex items-center space-x-4">
-                        <select className="text-black px-3 py-1 rounded-lg text-sm cursor-pointer transition-opacity duration-200 ease-in-out hover:opacity-80">
+                        <select className="text-black px-3 py-1 rounded-lg text-xs 2xl:text-xm cursor-pointer transition-opacity duration-200 ease-in-out hover:opacity-80">
                             <option value="add">Last 7 days</option>
                             <option value="remove">...</option>
                         </select>
                     </div>
                 </div>
 
-                <div className="bg-transparent flex justify-between gap-4">
+                <div className="bg-transparent flex flex-col md:flex-row justify-between gap-4">
                     {statsData.map((stat: {title: string, value: string, description: string, percentage: string, percentageColor: string, progressColor: string, progressValue: number}, index: number) => (
                         <div key={index} className="bg-white rounded-lg p-6 shadow-md flex-1">
                             <div className="flex flex-row justify-between">
@@ -221,7 +219,7 @@ export default function PostsPage() {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <div className="bg-white p-6 rounded-lg shadow-md">
                         <h4 className="text-lg font-bold mb-4">User Growth</h4>
                         <Bar data={userGrowthData} options={chartOptions} />

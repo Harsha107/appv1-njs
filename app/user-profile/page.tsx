@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function UserProfile() {
     return (
-        <div className="bg-gray-100 mt-16 ml-0 md:ml-64"> 
+        <div className="bg-transparent mt-16 ml-0 2xl:ml-64"> 
             <main className="flex flex-col flex-1 gap-4 pt-4 mx-4">
                 <div className="bg-white flex flex-row items-center justify-between p-6 shadow-md rounded-lg">
                     <div className="flex flex-row justify-center gap-4 items-center">
@@ -23,7 +23,7 @@ export default function UserProfile() {
                     </div>
                 </div>
 
-                <div className="bg-transparent flex justify-between gap-4">
+                <div className="bg-transparent flex flex-col lg:flex-row justify-between gap-4">
                     <div className="bg-white p-4 shadow-md flex flex-col gap-3 flex-1 rounded-lg">
                         <span className="font-bold text-lg ml-3">Personal Information</span>
                         <span className="ml-3">

@@ -3,7 +3,7 @@ import pfp from '../../public/pfp-img.jpg';
 import { FaSearch } from "react-icons/fa";
 import Image from "next/image";
 
-export default function UserList() {
+export default function UserListComp() {
 
     const UserListData = [
         {
