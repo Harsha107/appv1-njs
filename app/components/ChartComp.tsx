@@ -137,12 +137,12 @@ export default function ChartComp() {
 
                 <div className="border-2 border-gray-200 rounded-lg p-4 hover:border-black">
                     <h4 className="text-lg font-bold mb-4">Audience Acquisition</h4>
-                    <Doughnut data={acquisitionData1} options={doughnutOptions} />
+                    <Doughnut data={acquisitionData1} options={doughnutOptions} className="p-10" />
                 </div>
 
                 <div className="border-2 border-gray-200 rounded-lg p-4 hover:border-black">
                     <h4 className="text-lg font-bold mb-4">Audience Acquisition</h4>
-                    <Doughnut data={acquisitionData2} options={doughnutOptions} />
+                    <Doughnut data={acquisitionData2} options={doughnutOptions} className="p-10"/>
                 </div>
             </div>
 
