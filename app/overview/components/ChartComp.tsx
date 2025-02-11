@@ -3,6 +3,7 @@
 import React from "react";
 import { Chart as ChartJS, ArcElement, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js';
 import { Bar, Doughnut } from "react-chartjs-2";
+import './styles.css';
 
 ChartJS.register(ArcElement, BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -125,23 +126,23 @@ export default function ChartComp() {
     return (
         <div className="flex flex-col gap-10 mx-10">
             <div className="grid grid-cols-2 gap-20">
-                <div className="border-2 border-gray-200 rounded-lg p-4 hover:border-black">
-                    <h4 className="text-lg font-bold mb-4">Audience Age</h4>
+                <div className="graph-div">
+                    <h4 className="graph-title">Audience Age</h4>
                     <Bar data={ageData} options={horizontalChartOptions} />
                 </div>
 
-                <div className="border-2 border-gray-200 rounded-lg p-4 hover:border-black">
-                    <h4 className="text-lg font-bold mb-4">Audience Demographics</h4>
+                <div className="graph-div">
+                    <h4 className="graph-title">Audience Demographics</h4>
                     <Bar data={demographicsData} options={horizontalChartOptions}/>
                 </div>
 
-                <div className="border-2 border-gray-200 rounded-lg p-4 hover:border-black">
-                    <h4 className="text-lg font-bold mb-4">Audience Acquisition</h4>
+                <div className="graph-div">
+                    <h4 className="graph-title">Audience Acquisition</h4>
                     <Doughnut data={acquisitionData1} options={doughnutOptions} className="p-10" />
                 </div>
 
-                <div className="border-2 border-gray-200 rounded-lg p-4 hover:border-black">
-                    <h4 className="text-lg font-bold mb-4">Audience Acquisition</h4>
+                <div className="graph-div">
+                    <h4 className="graph-title">Audience Acquisition</h4>
                     <Doughnut data={acquisitionData2} options={doughnutOptions} className="p-10"/>
                 </div>
             </div>
@@ -149,17 +150,17 @@ export default function ChartComp() {
             <div className="flex flex-col gap-10">
                 <h1 className="font-bold text-2xl">Top Searches</h1>
                 <div className="grid grid-cols-3 gap-4">
-                    <div className="border-2 border-gray-200 p-4 rounded-lg hover:border-black">
+                    <div className="ts-graph">
                         <h4 className="font-bold text-lg mb-4">Keywords</h4>
                         <Bar data={keywordsData} options={horizontalChartOptions} />
                     </div>
 
-                    <div className="border-2 border-gray-200 p-4 rounded-lg hover:border-black">
+                    <div className="ts-graph">
                         <h4 className="font-bold text-lg mb-4">Tags</h4>
                         <Bar data={tagsData} options={horizontalChartOptions} />
                     </div>
 
-                    <div className="border-2 border-gray-200 p-4 rounded-lg hover:border-black">
+                    <div className="ts-graph">
                         <h4 className="font-bold text-lg mb-4">Users</h4>
                         <Bar data={usersData} options={horizontalChartOptions} />
                     </div>

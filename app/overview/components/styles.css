@@ -1,0 +1,19 @@
+.graph-div {
+    @apply ring-2 ring-gray-200 rounded-lg p-4 duration-300;
+}
+
+.graph-div:hover {
+    @apply ring-black;
+}
+
+.graph-title {
+    @apply text-lg font-bold mb-4;
+}
+
+.ts-graph {
+    @apply ring-2 ring-gray-200 p-4 rounded-lg duration-300;
+}
+
+.ts-graph:hover {
+    @apply ring-black;
+}
