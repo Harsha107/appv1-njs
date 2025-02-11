@@ -154,12 +154,12 @@ export default function ChartComp() {
                         <Bar data={keywordsData} options={horizontalChartOptions} />
                     </div>
 
-                    <div className="border-2 border-gray-200 p-2 rounded-lg hover:border-black">
+                    <div className="border-2 border-gray-200 p-4 rounded-lg hover:border-black">
                         <h4 className="font-bold text-lg mb-4">Tags</h4>
                         <Bar data={tagsData} options={horizontalChartOptions} />
                     </div>
 
-                    <div className="border-2 border-gray-200 p-2 rounded-lg hover:border-black">
+                    <div className="border-2 border-gray-200 p-4 rounded-lg hover:border-black">
                         <h4 className="font-bold text-lg mb-4">Users</h4>
                         <Bar data={usersData} options={horizontalChartOptions} />
                     </div>
