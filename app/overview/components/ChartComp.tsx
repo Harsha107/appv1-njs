@@ -22,7 +22,7 @@ export default function ChartComp() {
     }
 
     const horizontalChartOptions = {
-        indexAxis: 'y' as 'y',
+        indexAxis: 'y' as const,
         responsive: true,
         plugins: {
             legend: {
