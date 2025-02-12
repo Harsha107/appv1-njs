@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import postData from "@/data/postData";
+import './styles.css';
 
 export default function PostComp() {
     return (
@@ -28,17 +29,17 @@ export default function PostComp() {
                                     <Image src={post.src} alt="post-pic" height={125} width={125} unoptimized />
                                 </td>
                                 <td className="px-6 py-3">{post.caption}</td>
-                                <td className="px-6 py-3 text-center">
+                                <td className="post-btn">
                                     <button className="border border-black px-3 py-1 rounded-full hover:border-white hover:bg-black hover:text-white">
                                         Moment
                                     </button>
                                 </td>
-                                <td className="px-6 py-3 text-center">
+                                <td className="post-btn">
                                     <button className="border border-white px-3 py-1 rounded-full text-white bg-red-500 hover:border-red-500 hover:bg-white hover:text-red-500">
                                         Spam
                                     </button>
                                 </td>
-                                <td className="px-6 py-3 text-center">
+                                <td className="post-btn">
                                     <button className="border border-white px-3 py-1 rounded-full bg-blue-500 text-white hover:border-blue-500 hover:text-blue-500 hover:bg-white">
                                         View
                                     </button>

@@ -17,3 +17,7 @@
 .ts-graph:hover {
     @apply ring-black;
 }
+
+.post-btn {
+    @apply px-6 py-3 text-center;
+}

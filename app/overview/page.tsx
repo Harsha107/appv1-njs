@@ -12,7 +12,7 @@ export default function OverviewPage() {
 
                 <div className='shadow-sm border-2 bg-white border-gray-300 rounded-lg p-4 flex flex-col gap-10'>
                     <div className='flex flex-row justify-end'>
-                        <button className='bg-white border border-black text-black px-20 py-1 hover:bg-black hover:text-white hover:border-white'>Filters</button>
+                        <button className='bg-white border border-black text-black px-20 py-1 hover:bg-black hover:text-white hover:border-white duration-300'>Filters</button>
                     </div>
 
                     <ChartComp />
