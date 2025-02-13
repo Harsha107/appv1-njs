@@ -1,0 +1,39 @@
+.ups-h2 {
+    @apply font-semibold;
+}
+
+.ups-div {
+    @apply flex flex-col gap-2;
+}
+
+.ups-subdiv {
+    @apply flex flex-row justify-between items-center;
+}
+
+.ups-span {
+    @apply flex flex-col;
+}
+
+.ups-p {
+    @apply font-extralight text-sm;
+}
+
+.ups-li1 {
+    @apply flex flex-row items-center gap-2;
+}
+
+.ups-li2 {
+    @apply flex flex-row gap-2;
+}
+
+.ups-span2 {
+    @apply text-sm font-extralight;
+}
+
+.ups-span3 {
+    @apply text-sm;
+}
+
+.ups-label {
+    @apply inline-flex items-center cursor-pointer;
+}
